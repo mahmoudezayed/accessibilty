@@ -1,0 +1,4 @@
+services: 
+  ac_ffmpeg.video_merger:
+    class: Drupal\ac_ffmpeg\VideoMerger
+    arguments: ['@php_ffmpeg']

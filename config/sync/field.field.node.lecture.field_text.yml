@@ -1,0 +1,19 @@
+uuid: e88e1fca-116b-472c-ad7b-35343356e5d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_text
+    - node.type.lecture
+id: node.lecture.field_text
+field_name: field_text
+entity_type: node
+bundle: lecture
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

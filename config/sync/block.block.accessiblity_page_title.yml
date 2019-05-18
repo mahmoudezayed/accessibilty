@@ -1,0 +1,20 @@
+uuid: 8528df4f-9343-4a99-8ba4-6f7da2da190a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - accessiblity
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: accessiblity_page_title
+theme: accessiblity
+region: content
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

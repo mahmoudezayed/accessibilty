@@ -1,0 +1,22 @@
+uuid: 1250f987-5f66-4c6e-8478-5ea60a6f230f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lecture.field_text
+    - node.type.lecture
+  module:
+    - user
+id: node.lecture.teaser
+targetEntityType: node
+bundle: lecture
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_text: true

@@ -1,0 +1,53 @@
+uuid: 121e7025-63a6-4975-bffb-c7e278dffed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.word.field_equivalent_words
+    - field.field.node.word.field_gif
+    - field.field.node.word.field_video
+    - node.type.word
+  module:
+    - file
+    - user
+id: node.word.default
+targetEntityType: node
+bundle: word
+mode: default
+content:
+  field_equivalent_words:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_gif:
+    weight: 2
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    type: file_default
+    region: content
+  field_video:
+    weight: 3
+    label: above
+    settings:
+      muted: false
+      width: 640
+      height: 480
+      controls: true
+      autoplay: false
+      loop: false
+      multiple_file_display_type: tags
+    third_party_settings: {  }
+    type: file_video
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

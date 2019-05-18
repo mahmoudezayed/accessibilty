@@ -1,0 +1,20 @@
+uuid: 7cd2b2e0-eef0-4fef-ab8a-990d5761e9bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - node.type.word
+  module:
+    - user
+id: node.word.teaser
+targetEntityType: node
+bundle: word
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

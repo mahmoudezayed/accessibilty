@@ -1,0 +1,23 @@
+uuid: 6a7c4677-70b1-45c3-ac4e-ac3c15b0102f
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+    - node
+id: node.field_gif
+field_name: field_gif
+entity_type: node
+type: file
+settings:
+  display_field: false
+  display_default: false
+  uri_scheme: public
+  target_type: file
+module: file
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

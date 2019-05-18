@@ -1,0 +1,6 @@
+ffmpeg_binary: ''
+ffprobe_binary: ''
+execution_timeout: 0
+threads_amount: 0
+_core:
+  default_config_hash: KJntKxIgLpYRqWKWptZislICddAvWd6Ccdffj8rOBl0

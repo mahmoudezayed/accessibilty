@@ -1,0 +1,6 @@
+name: Accessibility FFMPEG
+description: Custom module
+type: module
+core: 8.x
+dependencies:
+  - php_ffmpeg:php_ffmpeg

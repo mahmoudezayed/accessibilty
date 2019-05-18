@@ -1,0 +1,19 @@
+uuid: 02984a4a-0309-482e-ab9a-136868a5d36a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_equivalent_words
+    - node.type.word
+id: node.word.field_equivalent_words
+field_name: field_equivalent_words
+entity_type: node
+bundle: word
+label: 'Equivalent Words'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

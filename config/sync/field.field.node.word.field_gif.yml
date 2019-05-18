@@ -1,0 +1,27 @@
+uuid: 8b0aa283-002e-4b77-b758-2397840a5b8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_gif
+    - node.type.word
+  module:
+    - file
+id: node.word.field_gif
+field_name: field_gif
+entity_type: node
+bundle: word
+label: GIF
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'source_gifs/[date:custom:Y]-[date:custom:m]'
+  file_extensions: gif
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

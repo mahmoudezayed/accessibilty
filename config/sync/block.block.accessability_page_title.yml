@@ -1,0 +1,20 @@
+uuid: 66397292-e18b-4808-8d17-143e984c840b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - accessability
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: accessability_page_title
+theme: accessability
+region: content
+weight: -50
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

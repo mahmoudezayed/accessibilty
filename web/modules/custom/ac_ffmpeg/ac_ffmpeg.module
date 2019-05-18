@@ -1,0 +1,55 @@
+<?php
+
+use Drupal\Core\Url;
+use Drupal\file\Entity\File;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
+
+function ac_ffmpeg_theme($existing, $type, $theme, $path) {
+  return [
+    'html5_ffmpeg' => [
+    'variables' => ['video_url' => NULL],
+    ],
+  ];
+}
+
+function ac_ffmpeg_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
+  if ($entity->bundle() == 'lecture') {
+    // Lecture Body parsing.
+    $body = $entity->get('field_text')->value;
+    $body_words = preg_split('/[\s]+/', $body);
+    // Collect words videos.
+    $videos = [];
+    foreach ($body_words as $body_word) {
+      // Query database to get word video.
+      $query = \Drupal::entityQuery('node');
+      $query
+        ->condition('type', 'word')
+        ->condition('title', $body_word)
+        ->condition('status', 1)
+        ->range(0,1);
+      $results = $query->execute();
+
+      $nid = array_keys($results)[0];
+      $node = Node::load($nid);
+      $video_target_id = $node->get('field_video')->target_id;
+      $media = File::load($video_target_id);
+      $video_uri = $media->getFileUri();
+      // $video = file_create_url($video_uri);
+      $video = \Drupal::service('file_system')
+        ->realpath($video_uri);
+      $videos[] = $video;
+    }
+
+    // Then merge videos.
+    $video_merger = \Drupal::service('ac_ffmpeg.video_merger');
+    $built_video = $video_merger->concateVideos($videos, $entity->id());
+  
+    $build['output_video'] = array(
+      '#theme' => 'html5_ffmpeg',
+      '#video_url' => $built_video,
+    );
+  }
+  
+}

@@ -1,0 +1,7 @@
+example.my_page:
+  path: '/test'
+  defaults:
+    _controller: '\Drupal\ac_ffmpeg\Controller\TestController::testPage'
+    _title: 'Test page'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,27 @@
+uuid: 6ef4226a-e707-4b1b-9346-9255afd2e0ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lecture.field_text
+    - node.type.lecture
+  module:
+    - user
+id: node.lecture.default
+targetEntityType: node
+bundle: lecture
+mode: default
+content:
+  field_text:
+    weight: 102
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
