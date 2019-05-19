@@ -6,8 +6,11 @@ namespace Drupal\ac_ffmpeg;
 * Class VideoMerger.
 */
 class VideoMerger {
+  
   /**
-   * .
+   * The FFMpeg service.
+   *
+   * @var \FFMpeg\FFMpeg
    */
   private $php_ffmpeg;
 
@@ -20,7 +23,15 @@ class VideoMerger {
   }
 
   /**
+   * Concate some videos.
    * 
+   * @param array $videos
+   *  The array of videos that we need to concate.
+   * @param integer $entity_id
+   *  The id of entity that we will save the concated video to it.
+   * 
+   * @return string
+   *   File Url.
    */
   public function concateVideos($videos, $entity_id) {
     $files_path = \Drupal::service('file_system')

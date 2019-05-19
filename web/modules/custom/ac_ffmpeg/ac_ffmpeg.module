@@ -1,10 +1,18 @@
 <?php
 
+/**
+ * @file
+ * Main file for ac_ffmpeg module.
+ */
+
 use Drupal\file\Entity\File;
 use Drupal\node\Entity\Node;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Entity\Display\EntityViewDisplayInterface;
 
+/**
+ * Implements hook_theme().
+ */
 function ac_ffmpeg_theme($existing, $type, $theme, $path) {
   return [
     'html5_ffmpeg' => [
@@ -13,7 +21,9 @@ function ac_ffmpeg_theme($existing, $type, $theme, $path) {
   ];
 }
 
-
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
 function ac_ffmpeg_node_presave(EntityInterface $entity) {
   if ($entity->bundle() == 'lecture') {
     // Lecture Body parsing.
@@ -53,6 +63,9 @@ function ac_ffmpeg_node_presave(EntityInterface $entity) {
   }
 }
 
+/**
+ * Implements hook_ENTITY_TYPE_view().
+ */
 function ac_ffmpeg_node_view(array &$build, EntityInterface $entity, EntityViewDisplayInterface $display, $view_mode) {
   if ($entity->bundle() == 'lecture') {
     $built_video = $entity->get('field_video_url')->value;
