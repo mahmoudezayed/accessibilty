@@ -26,8 +26,8 @@ class VideoMerger {
     $files_path = \Drupal::service('file_system')
       ->realpath(file_default_scheme() . "://") . '/';
     $output_path = 'ffmpeg/output/video_' . date('Y-m-d-h-s-i') . '_' . $entity_id . '.mp4';
-
-    $video = $this->php_ffmpeg->open($videos[0]);
+    $ffmpeg = $this->php_ffmpeg;
+    $video = $ffmpeg->open($videos[0]);
     $video
       ->concat($videos)
       ->saveFromSameCodecs($files_path . $output_path, TRUE);

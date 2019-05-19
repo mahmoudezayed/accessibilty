@@ -1,0 +1,19 @@
+uuid: 39bee684-5e75-4e24-9662-963470d0e86c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_url
+    - node.type.lecture
+id: node.lecture.field_video_url
+field_name: field_video_url
+entity_type: node
+bundle: lecture
+label: 'Video Url'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
