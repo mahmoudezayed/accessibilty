@@ -70,7 +70,7 @@ function ac_ffmpeg_node_view(array &$build, EntityInterface $entity, EntityViewD
   if ($entity->bundle() == 'lecture') {
     $built_video = $entity->get('field_video_url')->value;
     if ($built_video) {
-      $build['output_video'] = [
+      $build['first']['output_video'] = [
         '#theme' => 'html5_ffmpeg',
         '#video_url' => $built_video,
       ];

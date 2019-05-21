@@ -1,0 +1,22 @@
+uuid: 23b7d94e-c5ab-428e-9553-c18de2745833
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full
+    - taxonomy.vocabulary.course
+  module:
+    - text
+id: taxonomy_term.course.full
+targetEntityType: taxonomy_term
+bundle: course
+mode: full
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

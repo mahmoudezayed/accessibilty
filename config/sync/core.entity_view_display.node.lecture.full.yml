@@ -1,30 +1,31 @@
-uuid: 6ef4226a-e707-4b1b-9346-9255afd2e0ef
+uuid: ff3f9440-b1a5-40f9-a5f4-3e7d5ed93e2f
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.full
     - field.field.node.lecture.field_course
     - field.field.node.lecture.field_text
     - field.field.node.lecture.field_video_url
     - node.type.lecture
   module:
     - user
-id: node.lecture.default
+id: node.lecture.full
 targetEntityType: node
 bundle: lecture
-mode: default
+mode: full
 content:
   field_course:
-    weight: 2
-    label: above
+    weight: 1
+    label: inline
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_text:
-    weight: 1
-    label: above
+    weight: 2
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
