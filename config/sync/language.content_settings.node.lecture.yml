@@ -1,0 +1,11 @@
+uuid: 03d679bc-c66c-44ea-acab-10f3b8f97286
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lecture
+id: node.lecture
+target_entity_type_id: node
+target_bundle: lecture
+default_langcode: current_interface
+language_alterable: false

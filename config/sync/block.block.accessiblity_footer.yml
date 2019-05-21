@@ -1,6 +1,6 @@
 uuid: 572b935f-72ac-482a-b3b2-b8aa6b66fdb2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.footer
@@ -13,7 +13,7 @@ _core:
 id: accessiblity_footer
 theme: accessiblity
 region: footer
-weight: -4
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

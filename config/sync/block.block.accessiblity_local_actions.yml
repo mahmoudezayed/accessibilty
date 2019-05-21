@@ -8,8 +8,8 @@ _core:
   default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
 id: accessiblity_local_actions
 theme: accessiblity
-region: content
-weight: -2
+region: sidebar_first
+weight: -6
 provider: null
 plugin: local_actions_block
 settings:

@@ -4,6 +4,9 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.word.field_equivalent_words
+    - field.field.node.word.field_gif
+    - field.field.node.word.field_video
     - node.type.word
   module:
     - user
@@ -17,4 +20,8 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_equivalent_words: true
+  field_gif: true
+  field_video: true
+  langcode: true

@@ -54,4 +54,5 @@ content:
 hidden:
   field_course: true
   field_video_url: true
+  langcode: true
   links: true

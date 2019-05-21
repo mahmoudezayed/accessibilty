@@ -1,0 +1,11 @@
+uuid: b7cfc6d7-5990-4db1-9280-dc752f46e1be
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.word
+id: node.word
+target_entity_type_id: node
+target_bundle: word
+default_langcode: current_interface
+language_alterable: false

@@ -1,6 +1,6 @@
 uuid: 60d17122-0329-469b-8236-a064d9c284ff
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -11,7 +11,7 @@ _core:
 id: accessiblity_search
 theme: accessiblity
 region: sidebar_first
-weight: -6
+weight: -4
 provider: null
 plugin: search_form_block
 settings:

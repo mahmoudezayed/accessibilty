@@ -36,3 +36,4 @@ content:
     third_party_settings: {  }
 hidden:
   field_video_url: true
+  langcode: true

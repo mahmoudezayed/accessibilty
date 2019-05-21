@@ -36,10 +36,15 @@ function ac_ffmpeg_node_presave(EntityInterface $entity) {
       $query = \Drupal::entityQuery('node');
       $query
         ->condition('type', 'word')
-        ->condition('title', $body_word)
         ->condition('status', 1)
         ->range(0,1);
-      $results = $query->execute();
+
+      $group = $query->orConditionGroup()
+                ->condition('title', $body_word)
+                ->condition('field_equivalent_words', $body_word);
+
+      $results = $query->condition($group)->execute();
+      
       if ($results) {
         $nid = array_keys($results)[0];
         $node = Node::load($nid);
