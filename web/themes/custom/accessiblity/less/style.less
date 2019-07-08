@@ -3,3 +3,58 @@
 
 // Base-theme overrides.
 @import 'overrides';
+
+body {
+  .logo {
+    img {
+      max-width: 50px;
+    }
+  }
+  margin-top: 0;
+  .navbar-default {
+    background-color: #0079c2;
+    border-radius: 0;
+    border: 0;
+    .navbar-brand {
+      color: #fff;
+    }
+    .navbar-nav > li > a {
+      color: #fff;
+    }
+  }
+  .dialog-off-canvas-main-canvas {
+    min-height: 100%;
+  }
+  .main-container {
+    min-height: calc(100vh - 70px);
+  }
+  .footer {
+    height: 50px;
+  }
+  a.feed-icon {
+    display: none;
+  }
+  .taxonomy-term--type-course {
+    &.taxonomy-term--view-mode-full {
+      &.horizontal-media-teaser-view-mode {
+        background: #f3f5f4;
+        .field--name-description {
+          min-height: 258px;
+          position: relative;
+          p {
+            position: absolute;
+            top: 10%;
+            font-size: 22px;
+          }
+        }
+      }
+    }
+  }
+  .region-sidebar-first {
+    .block, #block-accessiblity-tools {
+      border: 1px solid #f3f5f4;
+      padding: 20px;
+      background: #f3f5f4;
+    }
+  }
+}

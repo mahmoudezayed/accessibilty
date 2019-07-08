@@ -7468,3 +7468,50 @@ p:last-child,
 .control-group .help-inline:first-child {
   margin-top: 0;
 }
+body {
+  margin-top: 0;
+}
+body .logo img {
+  max-width: 50px;
+}
+body .navbar-default {
+  background-color: #0079c2;
+  border-radius: 0;
+  border: 0;
+}
+body .navbar-default .navbar-brand {
+  color: #fff;
+}
+body .navbar-default .navbar-nav > li > a {
+  color: #fff;
+}
+body .dialog-off-canvas-main-canvas {
+  min-height: 100%;
+}
+body .main-container {
+  min-height: calc(100vh - 70px);
+}
+body .footer {
+  height: 50px;
+}
+body a.feed-icon {
+  display: none;
+}
+body .taxonomy-term--type-course.taxonomy-term--view-mode-full.horizontal-media-teaser-view-mode {
+  background: #f3f5f4;
+}
+body .taxonomy-term--type-course.taxonomy-term--view-mode-full.horizontal-media-teaser-view-mode .field--name-description {
+  min-height: 258px;
+  position: relative;
+}
+body .taxonomy-term--type-course.taxonomy-term--view-mode-full.horizontal-media-teaser-view-mode .field--name-description p {
+  position: absolute;
+  top: 10%;
+  font-size: 22px;
+}
+body .region-sidebar-first .block,
+body .region-sidebar-first #block-accessiblity-tools {
+  border: 1px solid #f3f5f4;
+  padding: 20px;
+  background: #f3f5f4;
+}
